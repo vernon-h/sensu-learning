@@ -1,0 +1,8 @@
+type: Asset
+api_version: core/v2
+metadata:
+  name: sensu-go-print-asset
+  namespace: default
+spec:
+  url: https://github.com/vernon-h/sensu-learning/releases/download/0.0.2/sensu-go-print-0.0.2.tar.gz
+  sha512: 0d18af3e4ac012c99a0f006f2652729f91b67cb35514214a4e4c790d0a953dc351c84cd48f01f98098a1ad2450a6b0acc287f17a455db1e5fe18457205e6070f
