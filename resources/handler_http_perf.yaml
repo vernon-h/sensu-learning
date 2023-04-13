@@ -4,7 +4,7 @@ metadata:
   name: http
 spec:
   type: pipe
-  command: http-perf --url http://10.225.36.124:8701/healthcheck --warning 1s --critical 2s
+  command: http-perf --url https://www.boredapi.com/api/activity --warning 1s --critical 2s
   timeout: 2s
   runtime_assets:
   - http-checks

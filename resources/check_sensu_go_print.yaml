@@ -1,0 +1,49 @@
+type: CheckConfig
+api_version: core/v2
+metadata:
+  name: sensu-go-print-time-check
+  namespace: default
+spec:
+  command: sensu-go-print --print time
+  runtime_assets:
+  - sensu-go-print-asset
+  interval: 5
+  publish: true
+  handlers:
+  - debug
+  subscriptions:
+  - webserver
+
+---
+type: CheckConfig
+api_version: core/v2
+metadata:
+  name: sensu-go-print-current-directory-check
+  namespace: default
+spec:
+  command: sensu-go-print --print current_dir
+  runtime_assets:
+  - sensu-go-print-asset
+  interval: 5
+  publish: true
+  handlers:
+  - debug
+  subscriptions:
+  - webserver
+    
+---
+type: CheckConfig
+api_version: core/v2
+metadata:
+  name: sensu-go-print-unknown-check
+  namespace: default
+spec:
+  command: sensu-go-print --print unknown
+  runtime_assets:
+  - sensu-go-print-asset
+  interval: 5
+  publish: true
+  handlers:
+  - debug
+  subscriptions:
+  - webserver
