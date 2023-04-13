@@ -1,0 +1,10 @@
+api_version: core/v2
+type: Handler
+metadata:
+  name: http
+spec:
+  type: pipe
+  command: http-perf --url http://10.225.36.124:8701/healthcheck --warning 1s --critical 2s
+  timeout: 2s
+  runtime_assets:
+  - http-checks

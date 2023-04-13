@@ -1,0 +1,21 @@
+type: Pipeline
+api_version: core/v2
+metadata:
+  name: alerts_pipeline
+spec:
+  workflows:
+  - name: http_alerts
+    filters:
+    - name: state_change_only
+      type: EventFilter
+      api_version: core/v2
+    - name: is_incident
+      type: EventFilter
+      api_version: core/v2
+    - name: not_silenced
+      type: EventFilter
+      api_version: core/v2
+    handler:
+      name: http
+      type: Handler
+      api_version: core/v2
