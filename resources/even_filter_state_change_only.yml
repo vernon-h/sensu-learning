@@ -1,0 +1,11 @@
+type: EventFilter
+api_version: core/v2
+metadata: 
+  annotations: null
+  labels: null
+  name: state_change_only
+spec:
+  action: allow
+  expressions:
+  - event.check.occurrences == 1
+  runtime_assets: []
